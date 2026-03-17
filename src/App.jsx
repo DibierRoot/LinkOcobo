@@ -5,7 +5,7 @@ import './index.css';
 function App() {
   return (
     <div 
-      className="min-h-screen flex justify-center px-5 py-10 bg-[url('/src/assets/image/FondoEstrellado.png')]"
+      className="min-h-screen flex justify-center px-5 py-10 bg-[url('/public/image/FondoEstrellado.png')]"
     >
       <div className="w-full max-w-md flex flex-col items-center gap-6">
         <div className="text-center animate-[fadeIn_0.6s_ease-out]">
