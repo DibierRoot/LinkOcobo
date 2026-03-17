@@ -92,7 +92,7 @@ function App() {
             onClick={() => setIsModalOpen(false)}
           >
             <div 
-              className="bg-gray-900 rounded-2xl p-6 w-full max-w-md border border-pink-500/30"
+              className="bg-gray-900 rounded-2xl p-6 w-full max-w-md border"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-6">
@@ -108,7 +108,7 @@ function App() {
                 {concerts.length === 0 ? (
                   <div className="text-center py-8">
                     <p className="text-4xl mb-4">🎸</p>
-                    <p className="text-white text-lg font-medium">¡Hasta ahora no hay conciertos Nené!</p>
+                    <p className="text-white text-lg font-medium">¡Hasta ahora no hay conciertos nené!</p>
                     <p className="text-gray-400 mt-2">Pendiente a nuestras redes 🔔</p>
                   </div>
                 ) : (

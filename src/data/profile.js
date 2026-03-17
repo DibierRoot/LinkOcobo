@@ -1,8 +1,8 @@
 export const profileData = {
-  name: "Ocobo",
+  name: "OCOBO",
   username: "@ocobo_b4nd",
-  bio: "Banda de Metal Core | 🌸 Los Ocobos siempre florecen | 📍 Ibagué-Colombia",
-  avatar: "/public/Foto.jpg", // Reemplaza con tu imagen real
+  bio: "Banda de Metalcore | 🌸 Los Ocobos Siempre Florecen | 📍 Ibagué-Colombia",
+  avatar: "/public/Foto.jpg",
   backgroundColor: "#1a1a2e",
   buttonColor: "#E96BA3",
   buttonTextColor: "#ffffff",
