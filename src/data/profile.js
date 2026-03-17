@@ -2,7 +2,7 @@ export const profileData = {
   name: "Ocobo",
   username: "@ocobo_b4nd",
   bio: "Banda de Metal Core | 🌸 Los Ocobos siempre florecen | 📍 Ibagué-Colombia",
-  avatar: "/public/image/Foto.jpg", // Reemplaza con tu imagen real
+  avatar: "/public/Foto.jpg", // Reemplaza con tu imagen real
   backgroundColor: "#1a1a2e",
   buttonColor: "#E96BA3",
   buttonTextColor: "#ffffff",
@@ -41,8 +41,8 @@ export const links = [
   },
   {
     id: 6,
-    title: "👕 Merch oficial",
-    url: "https://shopee.com/",
+    title: "👕 Merch oficial (Proximamente)",
+    url: "https://ocobo-shop.vercel.app/",
     icon: "shopping",
   },
 ];
