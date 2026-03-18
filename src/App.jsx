@@ -22,7 +22,7 @@ function App() {
       <div className="w-full max-w-md flex flex-col items-center gap-6">
         <div className="text-center animate-[fadeIn_0.6s_ease-out]">
           <img 
-            src="/public/Foto.jpg"
+            src="/Foto.jpg"
             alt={profileData.name} 
             className="w-28 h-28 rounded-full border-4 mx-auto mb-4 object-cover"
             style={{ borderColor: profileData.buttonColor, boxShadow: '0 4px 20px rgba(233, 69, 96, 0.3)' }}
