@@ -4,7 +4,7 @@ import Icon from './components/Icon';
 import './index.css';
 
 const concerts = [
-  { id: 1, date: "09/05/2026", city: "Ibagué", venue: "Loft Bar Sala de Eventos", ticketUrl: "https://www.instagram.com/p/DW2aOktFJPp/?igsh=MWt5eTF2cHp4OGhuaw==" }
+  // { id: 1, date: "09/05/2026", city: "Ibagué", venue: "Loft Bar Sala de Eventos", ticketUrl: "https://www.instagram.com/p/DW2aOktFJPp/?igsh=MWt5eTF2cHp4OGhuaw==" }
 ];
 
 function App() {
