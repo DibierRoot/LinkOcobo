@@ -28,12 +28,21 @@ function App() {
     >
       <div className="w-full max-w-md flex flex-col items-center gap-6">
         <div className="text-center animate-[fadeIn_0.6s_ease-out]">
-          <img 
-            src="/Foto.jpg"
-            alt={profileData.name} 
-            className="w-28 h-28 rounded-full border-4 mx-auto mb-4 object-cover"
-            style={{ borderColor: profileData.buttonColor, boxShadow: '0 4px 20px rgba(233, 69, 96, 0.3)' }}
-          />
+          <div className="relative w-28 h-28 mx-auto mb-4"
+               >
+            <div className="w-full h-full rounded-full overflow-hidden relative border-4"
+                 style={{ borderColor: profileData.buttonColor }}>
+              <div 
+                className="absolute inset-0 bg-cover bg-center blur-md rounded-full"
+                style={{ backgroundImage: `url(${profileData.avatar})` }}
+              />
+              <img 
+                src={profileData.avatar}
+                alt={profileData.name} 
+                className="relative w-full h-full object-contain"
+              />
+            </div>
+          </div>
           <h1 className="text-2xl font-bold text-white mb-1">{profileData.name}</h1>
           <p className="text-sm font-medium mb-2" style={{ color: profileData.buttonColor }}>{profileData.username}</p>
           <p className="text-sm text-gray-400 max-w-[320px]">{profileData.bio}</p>
