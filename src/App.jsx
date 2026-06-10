@@ -4,11 +4,18 @@ import Icon from './components/Icon';
 import './index.css';
 
 const concerts = [
-  // { id: 1, date: "09/05/2026", city: "Ibagué", venue: "Loft Bar Sala de Eventos", ticketUrl: "https://www.instagram.com/p/DW2aOktFJPp/?igsh=MWt5eTF2cHp4OGhuaw==" }
+  { id: 1, date: "15/08/2026", city: "Ibagué", venue: "Loft Bar Sala de Eventos, Junto a ANDES, THE CROWLLERS Y RENACIDO", ticketUrl: "https://www.instagram.com/p/DY3U5kIjM-z/?img_index=4&igsh=c2lldTk1dmxhNnh6" }
 ];
 
 function App() {
+
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [abrirUltimoVideo, setAbrirUltimoVideo] = useState(false);
+
+  const handleVideoClick = (e) => {
+    e.preventDefault();
+    setAbrirUltimoVideo(!abrirUltimoVideo);
+  };
 
   const handleConcertsClick = (e) => {
     e.preventDefault();
@@ -49,21 +56,46 @@ function App() {
                 <span>{link.title}</span>
               </button>
             ) : (
-              <a
-                key={link.id}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 px-5 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg bg-RosadoOcobo"
-                style={{ 
-                  color: profileData.buttonTextColor,
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
-                  animationDelay: `${0.1 + index * 0.05}s`
-                }}
-              >
-                <Icon name={link.icon} />
-                <span>{link.title}</span>
-              </a>
+              link.id == 2 ? (
+                <div
+                  onClick={handleVideoClick}
+                  className={`flex flex-col gap-5 px-5 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg bg-RosadoOcobo ${abrirUltimoVideo && link.id == 2 ? "h-96 items-start" : "h-14 items-start"}`}
+                  style={{ 
+                    color: profileData.buttonTextColor,
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
+                    animationDelay: `${0.1 + index * 0.05}s`
+                  }}>
+                  <a
+                    key={link.id}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 cursor-default"
+                  >
+                    <Icon name={link.icon} />
+                    <span>{link.title}</span>
+                  </a>
+                  <iframe
+                    className={`flex items-center justify-center ${abrirUltimoVideo ? "h-[100%] w-[100%]" : "h-0 overflow-hidden"}`}
+                    src="https://youtube.com/embed/41OOoIgLNSw?si=bwvbD3VwInqoBpYz" frameborder="0">
+                  </iframe>
+                </div>
+              ) : (
+                <a
+                  key={link.id}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-3 px-5 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg bg-RosadoOcobo ${abrirUltimoVideo && link.id == 2 ? "h-96" : ""}`}
+                  style={{ 
+                    color: profileData.buttonTextColor,
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
+                    animationDelay: `${0.1 + index * 0.05}s`
+                  }}
+                >
+                  <Icon name={link.icon} />
+                  <span>{link.title}</span>
+                </a>
+              )
             )
           ))}
         </div>
